@@ -1,0 +1,6 @@
+.woocommerce-products-header__title.page-title {
+    @apply text-text-color text-3xl md:text-4xl font-bold mb-10;
+}
+.wysiwyg-editor ul li.product-category.product {
+    @apply m-0;
+}

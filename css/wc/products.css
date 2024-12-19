@@ -1,0 +1,73 @@
+main.woocommerce-page {
+    @apply my-12;
+}
+ul.products {
+    @apply grid md:grid-cols-2 gap-8;
+}
+ul.products li {
+    @apply text-2xl text-text-color transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 relative;
+}
+ul.products.columns-3 {
+    @apply xl:grid-cols-3;
+}
+ul.products.columns-4 {
+    @apply xl:grid-cols-4;
+}
+ul.products.columns-5 {
+    @apply xl:grid-cols-3 2xl:grid-cols-5;
+}
+ul.products.columns-6 {
+    @apply xl:grid-cols-3 2xl:grid-cols-6;
+}
+ul.products .woocommerce-loop-product__link {
+    @apply relative;
+}
+ul.products .woocommerce-loop-product__link img {
+    @apply w-full;
+}
+.woocommerce-loop-product__title {
+    @apply text-lg mt-4 hover:text-text-color transition-all;
+}
+.button.product_type_simple {
+    @apply text-3xl min-w-fit p-0 hover:bg-transparent text-text-color hover:text-text-color;
+}
+ul.products .price {
+    @apply text-base text-text-color;
+}
+ul.products .price del {
+    @apply opacity-40;
+}
+ul.products .price ins {
+    @apply no-underline;
+}
+
+/* Pagination */
+.woocommerce-pagination {
+    @apply my-16;
+}
+.woocommerce-pagination ul {
+    @apply flex justify-center space-x-4 text-2xl;
+}
+.woocommerce-pagination a {
+    @apply hover:text-primary-color;
+}
+.woocommerce-pagination .current {
+    @apply font-bold;
+}
+
+/* Categories */
+.category-section .count {
+    @apply hidden;
+}
+ul.products li.product-category {
+    @apply xl:first:col-span-2 xl:first:row-span-2;
+}
+ul.products li.product-category img {
+    @apply w-full;
+}
+.product-category {
+    @apply !p-0;
+}
+.product-category .woocommerce-loop-category__title {
+    @apply w-full text-xl 2xl:text-2xl text-white text-center uppercase tracking-widest absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}

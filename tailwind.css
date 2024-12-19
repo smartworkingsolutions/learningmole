@@ -1,0 +1,551 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "css/woocommerce";
+
+@layer base {
+	:root {
+		--clr-primary-100: #DFFCFC;
+		--clr-primary-200: #c3eff0;
+		--clr-primary: #13ABB0;
+		--clr-secondary: #f39975;
+		--clr-text: #3D3D3D;
+		--clr-hover: #3D3D3D;
+		--clr-light: #f9f9f9;
+		--clr-border: #eae9e7;
+	}
+	html,
+	body {
+		@apply scroll-smooth;
+	}
+	body {
+		font-family: system-ui, sans-serif;
+		@apply text-text-color text-sm;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold;
+	}
+	a {
+		@apply transition ease-linear;
+	}
+
+	p {
+		@apply text-text-color leading-relaxed;
+	}
+	[type='text'],
+	[type='email'],
+	[type='url'],
+	[type='password'],
+	[type='number'],
+	[type='date'],
+	[type='datetime-local'],
+	[type='month'],
+	[type='search'],
+	[type='tel'],
+	[type='time'],
+	[type='week'],
+	[multiple],
+	textarea,
+	select {
+		@apply w-full h-12 border-border-color focus:border-primary-color focus:outline-none focus:ring-primary-color placeholder:text-text-color text-text-color rounded-md px-4;
+	}
+	label {
+		@apply text-base font-semibold tracking-wider;
+	}
+	textarea {
+		@apply h-32;
+	}
+
+	/* Animations */
+	@keyframes wave {
+		0% {
+			margin-left: 0;
+		}
+		
+		100% {
+			margin-left: -1600px;
+		}
+	}
+	@keyframes swell {
+		0%, 100% {
+			transform: translate3d(0,-25px,0);
+		}
+		
+		50% {
+			transform: translate3d(0,5px,0);
+		}
+	}
+}
+@layer components {
+    .button,
+	.comment-form .submit {
+		@apply h-12 inline-flex justify-center items-center text-white font-semibold bg-primary-color hover:bg-hover-color transition ease-in rounded-md px-4 py-3 min-w-fit tracking-px;
+    }
+	.button-medium {
+		@apply h-10;
+	}
+	.button-big {
+		@apply text-base sm:text-xl font-bold tracking-normal sm:tracking-px;
+	}
+	.button-white {
+		@apply bg-white hover:bg-hover-color text-text-color hover:text-white border border-border-color hover:border-hover-color;
+	}
+	.button-secondary {
+		@apply bg-secondary-color hover:bg-hover-color text-white;
+	}
+	.button-border {
+		@apply bg-transparent hover:bg-hover-color text-white border-2 border-white hover:border-hover-color text-base font-bold;
+	}
+	.button-light-green {
+		@apply bg-primary-color-200 hover:bg-hover-color text-text-color hover:text-white text-base font-bold px-8;
+	}
+	
+}
+
+@layer utilities {
+	.sub-menu::before,
+	.dropdown-menu::before,
+	.mega-menu-container::before {
+		@apply content-[''] bg-transparent w-full h-12 absolute -top-12 left-0;
+	}
+	.active-menu span:nth-child(2) {
+		@apply hidden;
+	}
+	.active-menu span:nth-child(1) {
+		@apply rotate-45 translate-y-1 origin-center;
+	}
+	.active-menu span:nth-child(3) {
+		@apply -rotate-45 -translate-y-1 origin-center;
+	}
+
+	.fancy-border {
+		@apply rounded-lg md:rounded-[41%_59%_48%_52%_/_34%_45%_55%_66%];
+	}
+	
+	.wysiwyg-editor {
+		@apply grid;
+	}
+	.wysiwyg-editor p {
+		@apply text-base;
+	}
+	.wysiwyg-editor h1,
+	.wysiwyg-editor h2,
+	.wysiwyg-editor h3,
+	.wysiwyg-editor h4,
+	.wysiwyg-editor h5,
+	.wysiwyg-editor h6 {
+		@apply text-primary-color font-bold leading-[1.1];
+	}
+	.single-page .wysiwyg-editor h1.wp-block-heading,
+	.single-page .wysiwyg-editor h2.wp-block-heading,
+	.single-page .wysiwyg-editor h3.wp-block-heading,
+	.single-page .wysiwyg-editor h4.wp-block-heading,
+	.single-page .wysiwyg-editor h5.wp-block-heading,
+	.single-page .wysiwyg-editor h6.wp-block-heading {
+		@apply mb-0;
+	}
+
+	.wysiwyg-editor h1 {
+		@apply text-2xl lg:text-5xl;
+	}
+	.wysiwyg-editor h2 {
+		@apply text-2xl lg:text-4xl;
+	}
+	.wysiwyg-editor h3 {
+		@apply text-2xl lg:text-3xl;
+	}
+	.wysiwyg-editor h4 {
+		@apply text-xl lg:text-2xl;
+	}
+	.wysiwyg-editor h5 {
+		@apply text-xl;
+	}
+	.wysiwyg-editor h6 {
+		@apply text-lg;
+	}
+	.wysiwyg-editor blockquote {
+		@apply grid gap-6 pl-6 py-3 border-l-2 border-primary-color;
+	}
+	.wysiwyg-editor blockquote p {
+		@apply text-sm font-semibold leading-relaxed;
+	}
+	.wysiwyg-editor a:not(.button) {
+		@apply text-primary-color;
+	}
+	.wysiwyg-editor ul,
+	.wysiwyg-editor ol {
+		@apply text-base list-outside pl-6;
+	}
+	.wysiwyg-editor ul strong,
+	.wysiwyg-editor ol strong {
+		@apply font-semibold;
+	}
+	.wysiwyg-editor ul {
+		@apply list-disc;
+	}
+	.wysiwyg-editor ol {
+		@apply list-decimal;
+	}
+	.wysiwyg-editor ul li,
+	.wysiwyg-editor ol li {
+		@apply pl-4 my-3 leading-snug relative;
+	}
+	.wysiwyg-editor.price ul {
+		@apply grid gap-3 list-none p-0;
+	}
+	.wysiwyg-editor.price ul li {
+		@apply text-base text-text-color pl-8 m-0 relative;
+	}
+	.wysiwyg-editor.price ul li::before {
+		@apply content-[''] w-5 h-5 bg-tick bg-no-repeat absolute left-0 top-0.5;
+	}
+	.wysiwyg-editor .custom-list {
+		@apply grid gap-3 text-base font-semibold;
+	}
+	.wysiwyg-editor .custom-list > div {
+		@apply flex items-center gap-3;
+	}
+	.wysiwyg-editor img.aligncenter {
+		@apply mx-auto;
+	}
+	.wysiwyg-editor.dark * {
+		@apply text-white;
+	}
+	.wysiwyg-editor iframe {
+		@apply w-full h-full aspect-video;
+	}
+	.wysiwyg-editor figure {
+		@apply !w-auto grid;
+	}
+	.wysiwyg-editor .wp-block-image figcaption {
+		@apply mb-0;
+	}
+	.wysiwyg-editor .toc .wp-block-group__inner-container {
+		@apply w-full grid gap-4;
+	}
+	.wysiwyg-editor .toc ul,
+	.wysiwyg-editor .toc ol {
+		@apply flex flex-wrap gap-x-4 md:gap-x-0 gap-y-4 list-none p-0;
+	}
+	.wysiwyg-editor .toc li {
+		@apply text-text-color text-sm md:text-base md:border-l md:border-text-color md:first:border-l-0 my-0 px-0 md:px-4 first:pl-0 last:pr-0;
+	}
+
+	.wysiwyg-editor iframe {
+		@apply w-full h-full aspect-video;
+	}
+}
+
+[x-cloak] { display: none !important; }
+
+.post-type-archive-sfwd-lessons .breadcrumb-wrapper,
+.post-type-archive-sfwd-topic .breadcrumb-wrapper {
+	@apply hidden;
+}
+
+/* Rank Math TOC Start */
+.wysiwyg-editor .wp-block-rank-math-toc-block h2 {
+	@apply hidden;
+}
+.wysiwyg-editor .wp-block-rank-math-toc-block ul {
+	@apply p-0 list-none flex flex-wrap;
+}
+.wysiwyg-editor .wp-block-rank-math-toc-block li {
+	@apply text-text-color text-sm md:text-base border-l border-primary-color first:border-l-0 my-0 px-2 md:px-4 first:pl-0 last:pr-0;
+}
+/* Rank Math TOC End */
+
+.pagination {
+	@apply flex justify-center gap-2 font-bold;
+}
+.pagination .page-numbers {
+	@apply w-9 h-9 flex items-center justify-center rounded-md bg-white hover:bg-primary-color text-text-color hover:text-white border border-border-color hover:border-primary-color;
+}
+.pagination .prev.page-numbers,
+.pagination .next.page-numbers {
+	@apply text-white bg-text-color hover:bg-primary-color border-0;
+}
+.pagination .prev.page-numbers {
+	@apply rotate-180;
+}
+.pagination .page-numbers.current {
+	@apply bg-primary-color text-white border-0;
+}
+
+.big {
+	@apply text-lg;
+}
+.flex-after-md {
+	@apply hidden md:inline-block;
+}
+.divider-lines {
+	@apply hidden lg:h-14 2xl:h-auto 2xl:block;
+}
+.copyrights a {
+	@apply text-primary-color hover:text-secondary-color;
+}
+
+/* Slider */
+.category-slider .slick-slide {
+	@apply mx-4;
+}
+.category-slider .slick-list {
+	@apply -mx-4 overflow-visible;
+}
+/* dots */
+.slick-dots {
+	@apply flex justify-center gap-3 mt-10;
+}
+.slick-dots button {
+	@apply indent-[9999px] w-2.5 h-2.5 bg-black/20 rounded-full;
+}
+.slick-dots .slick-active button {
+	@apply bg-black/50;
+}
+.slick-track {
+    display: flex !important;
+}
+.slick-slide {
+    height: inherit !important;
+}
+.category-slider {
+    visibility: hidden;
+}
+.category-slider.slick-initialized {
+    visibility: visible;
+}
+
+/* Mega Menu */
+.mega-menu strong {
+	@apply inline-block mb-2;
+}
+.mega-menu p {
+	@apply leading-relaxed;
+}
+.mega-menu-content a {
+	@apply hover:text-primary-color;
+}
+
+/* Comments */
+.commentlist {
+	@apply grid gap-8;
+}
+.commentlist .comment {
+	@apply border-b border-border-color pb-8;
+}
+.comment-meta {
+	@apply flex justify-between items-center gap-4;
+}
+.comment-author.vcard {
+	@apply flex items-center gap-2;
+}
+.comment-author.vcard .avatar {
+	@apply mr-1;
+}
+.comment-content,
+.reply {
+	@apply mt-4 ml-1 pl-10;
+}
+.comment-reply-link {
+	@apply text-primary-color font-medium;
+}
+/* Comments Form */
+.comment-respond {
+	@apply bg-light-color p-6 rounded-md;
+}
+.comment-respond,
+.comment-form {
+	@apply grid gap-4;
+}
+.comment-respond .comment-reply-title,
+#comments {
+	@apply text-xl md:text-3xl;
+}
+.comment-notes,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	@apply order-first;
+}
+.comment-form-cookies-consent {
+	@apply flex items-center gap-2;
+}
+.comment-form .submit {
+	@apply mt-2;
+}
+
+/* LearnDash. */
+.learndash-course-grid[data-columns="3"] .items-wrapper {
+	@apply grid md:grid-cols-3 gap-10 relative;
+}
+.learndash-course-grid[data-columns="4"] .items-wrapper {
+	@apply grid md:grid-cols-3 xl:grid-cols-4 gap-10 relative;
+}
+.learndash-course-grid .thumbnail {
+	@apply relative;
+}
+.learndash-course-grid .image {
+	@apply rounded-t-10 overflow-hidden;
+}
+.learndash-course-grid .item {
+	@apply bg-white rounded-10 shadow-course;
+}
+.learndash-course-grid .ribbon {
+	@apply flex bg-secondary-color text-white text-sm rounded-sm px-1.5 absolute top-3 left-3;
+}
+.learndash-course-grid .item img {
+	@apply w-full aspect-video object-cover rounded-t-10 hover:scale-110 transition-all;
+}
+.learndash-course-grid .content {
+	@apply p-6;
+}
+.learndash-course-grid h3 {
+	@apply text-xl font-bold mb-2;
+}
+.learndash-course-grid .author,
+.learndash-course-grid .categories {
+	@apply inline-flex bg-primary-color-100 text-primary-color px-3 py-1 rounded-full;
+}
+.learndash-course-grid .categories .icon {
+	@apply mr-1;
+}
+.learndash-course-grid .categories {
+	@apply translate-y-[5px] ml-1;
+}
+.learndash-course-grid .separator {
+	@apply hidden;
+}
+.learndash-course-grid .bottom-meta {
+	@apply grid gap-2 mt-4 opacity-70;
+}
+.quiz_continue_link {
+	@apply !hidden;
+}
+
+/* LD Single */
+.learndash-wrapper {
+	@apply overflow-hidden;
+}
+.ld-item-list-items .ld-status-icon {
+	@apply !mt-0;
+}
+.ld-item-title,
+.ld-topic-title {
+	@apply text-base font-semibold;
+}
+.ld-text {
+	@apply text-sm;
+}
+.ld-table-list-lesson-details {
+	@apply text-xs;
+}
+.learndash-wrapper .ld-breadcrumbs .ld-breadcrumbs-segments {
+	@apply !text-xs;
+}
+.learndash-wrapper .ld-course-navigation .ld-table-list.ld-topic-list .ld-table-list-item .ld-table-list-item-preview {
+	@apply !items-center;
+}
+.ld-tabs-content iframe {
+	@apply w-full h-full aspect-video mt-4;
+}
+.ld-tabs-content .ld-tab-content {
+	@apply space-y-8;
+}
+.ld-tabs-content .ld-tab-content figure {
+	@apply w-full max-w-full;
+}
+.ld-tab-content[aria-labelledby='materials'] a {
+	@apply !underline underline-offset-1 text-primary-color;
+}
+.ld-tab-content[aria-labelledby='materials'] img {
+	@apply w-full;
+}
+.filter-wrapper .filter.price {
+	@apply hidden;
+}
+.ld-button {
+	@apply !text-white;
+}
+.wpProQuiz_question_text {
+	@apply text-2xl font-semibold;
+}
+
+.no-subscription .learndash_mark_complete_button {
+	@apply hidden;
+}
+
+/* Badge */
+.ld-achievements-leaderboard table {
+	@apply w-full mb-6;
+}
+.ld-achievements-leaderboard table td {
+	@apply capitalize;
+}
+.wpProQuiz_certificate.dashboard-button {
+	@apply inline-block mr-4;
+}
+.wpProQuiz_certificate.dashboard-button a {
+	@apply h-12 inline-flex justify-center items-center text-white font-semibold bg-primary-color hover:bg-hover-color transition ease-in rounded-md px-4 py-3 w-full tracking-px;
+}
+.ld-achievement-image {
+	@apply text-white;
+}
+.ld-achievement-image img {
+	@apply w-40 mb-6;
+}
+
+.light-svg svg {
+	@apply opacity-80 brightness-110 hidden md:block;
+}
+
+/* Gravity Forms */
+.gform_fields {
+	@apply grid gap-5;
+}
+.gfield {
+	@apply grid gap-2;
+}
+.gfield_required {
+	@apply text-sm text-[#c02b0a] italic ml-0.5;
+}
+
+/* Dashboard */
+.wbcom-ld-dashboard .rank-math-breadcrumb {
+	@apply mt-10 md:mt-16;
+}
+.ld-dashboard-statistics-container .ld-dashboard-icons span.ld-icons {
+	@apply leading-[1.4];
+}
+.ld-dashboard-profile-summary:after {
+	@apply hidden;
+}
+.ld-dashboard-add-course.ld-dashboard-btn-bg {
+	@apply border-2 border-white;
+}
+.dashboard-wrapper .woocommerce-info {
+	@apply flex items-center gap-2;
+}
+
+/* Login */
+.custom-login form {
+	@apply grid gap-4;
+}
+.custom-login #wp-submit {
+	@apply w-full;
+}
+.video-wrap::after {
+	@apply content-["Videos_are_only_available_to_subscribers"] text-primary-color text-sm sm:text-lg text-center font-bold bg-white py-2.5 sm:py-4 px-3 sm:px-6 rounded-10 absolute bottom-2.5 sm:bottom-[10%] left-2.5 sm:left-1/2 right-2.5 sm:right-auto sm:-translate-x-1/2 z-10;
+}
+
+/* Grow Plugin */
+.bqPxQc {
+	@apply !hidden;
+}

@@ -1,0 +1,54 @@
+.woocommerce-order-received h1 {
+    @apply max-w-4xl mx-auto;
+}
+
+.woocommerce-order {
+    @apply max-w-4xl mx-auto;
+}
+.woocommerce-order .woocommerce-thankyou-order-received {
+    @apply text-xl font-bold border border-l-4 border-green-500 py-3 px-6 mb-10;
+}
+
+.woocommerce-order .woocommerce-order-overview {
+    @apply bg-neutral-100 p-6 mb-10;
+}
+.woocommerce-order .woocommerce-order-overview li {
+    @apply text-text-color;
+}
+.woocommerce-order .woocommerce-order-overview + p {
+    @apply border-l-4 border-green-500 pl-4 mb-6;
+}
+
+.woocommerce-order .woocommerce-table--order-details {
+    @apply w-full text-left;
+}
+.woocommerce-order .woocommerce-table--order-details thead,
+.woocommerce-order .woocommerce-table--order-details tfoot th {
+    @apply bg-neutral-100;
+}
+.woocommerce-order .woocommerce-table--order-details thead th,
+.woocommerce-order .woocommerce-table--order-details tbody td,
+.woocommerce-order .woocommerce-table--order-details tfoot th,
+.woocommerce-order .woocommerce-table--order-details tfoot td {
+    @apply px-8 py-6;
+}
+.woocommerce-customer-details {
+    @apply border-2 border-neutral-300 mt-10 p-6;
+}
+.wysiwyg-editor ul.wc-item-meta li {
+    @apply text-text-color flex gap-2;
+}
+
+.woocommerce-customer-details .woocommerce-columns.woocommerce-columns--2 {
+    @apply grid gap-8 lg:grid-cols-2;
+}
+
+.woocommerce-thankyou-order-details.order_details {
+    @apply p-6;
+}
+table.order_details {
+    @apply mb-10;
+}
+table.woocommerce-orders-table--subscriptions {
+    @apply w-full;
+}

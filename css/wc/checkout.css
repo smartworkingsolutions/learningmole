@@ -1,0 +1,99 @@
+form.woocommerce-checkout {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 relative;
+}
+.woocommerce-NoticeGroup-checkout {
+    @apply col-span-full;
+}
+form.woocommerce-checkout h3 {
+    @apply text-4xl font-bold;
+}
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-checkout-review-order {
+    @apply mt-12;
+}
+form.woocommerce-checkout label,
+.woocommerce-EditAccountForm label {
+    @apply font-semibold mb-3;
+}
+form.woocommerce-checkout .form-row,
+.woocommerce-EditAccountForm .form-row {
+    @apply flex flex-col mb-8;
+}
+form.woocommerce-checkout .form-row-first,
+form.woocommerce-checkout .form-row-last,
+.woocommerce-EditAccountForm .form-row-first,
+.woocommerce-EditAccountForm .form-row-last {
+    @apply w-full md:w-[48%];
+}
+form.woocommerce-checkout .form-row-first,
+.woocommerce-EditAccountForm .form-row-first {
+    @apply float-left;
+}
+form.woocommerce-checkout .form-row-last,
+.woocommerce-EditAccountForm .form-row-last {
+    @apply float-right;
+}
+#billing_company_field,
+.clear {
+    @apply clear-both;
+}
+form.woocommerce-checkout .required,
+.woocommerce-EditAccountForm .required {
+    @apply no-underline text-red-500;
+}
+
+.woocommerce-checkout-payment .woocommerce-notices-wrapper {
+	@apply grid bg-light-color px-6 mb-4;
+}
+.woocommerce-checkout-payment .woocommerce-info {
+    @apply p-6;
+}
+
+/* Your order */
+.woocommerce-checkout-review-order-table {
+    @apply w-full text-left mb-12 md:mb-24;
+}
+.woocommerce-checkout-review-order-table thead,
+.woocommerce-checkout-review-order-table tfoot th {
+    @apply bg-neutral-100;
+}
+.woocommerce-checkout-review-order-table thead th,
+.woocommerce-checkout-review-order-table tbody td,
+.woocommerce-checkout-review-order-table tfoot th,
+.woocommerce-checkout-review-order-table tfoot td {
+    @apply px-8 py-6;
+}
+
+/* Coupon */
+.checkout_coupon.woocommerce-form-coupon {
+    @apply grid gap-6 border border-primary-color rounded-10 p-6 pb-2 mb-10;
+}
+
+/* Payments */
+.wc_payment_methods li {
+    @apply bg-neutral-100 pt-6 mb-px;
+}
+.wc_payment_methods li [type='radio'] {
+    @apply w-5 h-5 inline-block ml-6 mr-2 -translate-y-0.5 border-2 focus:ring-0 focus:ring-offset-0 focus:outline-none text-black;
+}
+.wc_payment_methods li label {
+    @apply inline-block m-6 border border-neutral-100;
+}
+.wc_payment_methods li .payment_box {
+    @apply bg-white p-8 border border-neutral-100 border-b-0;
+}
+#payment .place-order,
+#payment .place-order button {
+    @apply mt-12;
+}
+
+/* Select 2 */
+.select2-container--default .select2-selection--single {
+    @apply h-[46px] border-neutral-300 rounded-none;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 46px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    @apply w-8 h-[46px];
+}

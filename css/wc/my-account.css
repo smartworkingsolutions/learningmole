@@ -1,0 +1,88 @@
+.woocommerce-account .wysiwyg-editor {
+    @apply grid bg-primary-color-200 p-4 rounded-10;
+}
+.woocommerce-account.logged-in .woocommerce {
+    @apply grid grid-cols-1 md:grid-cols-4 gap-10;
+}
+.woocommerce-MyAccount-navigation ul {
+    @apply grid grid-cols-2 md:grid-cols-1 gap-1;
+}
+.woocommerce-account.logged-in .woocommerce-MyAccount-navigation li {
+    @apply text-sm sm:text-base sm:text-text-color sm:hover:bg-black/5 m-0 sm:py-3 sm:px-4 rounded-lg cursor-pointer;
+}
+.woocommerce-MyAccount-navigation li.is-active {
+    @apply text-primary-color sm:bg-black/5;
+}
+.woocommerce-MyAccount-navigation li a {
+    @apply block !text-text-color;
+}
+.woocommerce-MyAccount-content {
+    @apply lg:col-span-3 h-full bg-white p-6 lg:p-10 rounded-10;
+}
+.woocommerce-MyAccount-content table {
+    @apply w-full text-left;
+}
+.woocommerce-MyAccount-content table .button {
+    min-width: auto;
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-10;
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses header {
+    @apply flex space-x-4 bg-light-color py-3 px-6;
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses header a {
+    @apply font-bold hover:text-primary-color bg-primary-color;
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses address {
+    @apply border-l border-r border-b border-neutral-200 p-6;
+}
+.woocommerce-MyAccount-content .woocommerce-order-details {
+    @apply mt-4;
+}
+
+/* Forms */
+.woocommerce-EditAccountForm .form-row span {
+    @apply text-sm mt-2;
+}
+.woocommerce-EditAccountForm fieldset {
+    @apply border-2 border-neutral-200 px-10 py-6 mb-10;
+}
+.woocommerce-EditAccountForm legend {
+    @apply text-2xl font-bold bg-white p-2;
+}
+
+/* Login form */
+.woocommerce-account:not(.logged-in) .woocommerce {
+    @apply w-full max-w-5xl mx-auto;
+}
+.woocommerce-account:not(.logged-in) .woocommerce #customer_login {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10;
+}
+.woocommerce-account:not(.logged-in) .woocommerce h2 {
+    @apply text-3xl font-bold mb-8;
+}
+.woocommerce-account:not(.logged-in) .wysiwyg-editor {
+    @apply bg-transparent p-0;
+}
+.woocommerce-account:not(.logged-in) .woocommerce form {
+    @apply border-2 border-neutral-300 pb-4;
+}
+.woocommerce-account:not(.logged-in) .woocommerce form,
+.woocommerce-account:not(.logged-in) .woocommerce .form-row {
+    @apply grid gap-4;
+}
+.woocommerce-form-login__rememberme {
+    @apply flex items-center gap-3;
+}
+.woocommerce-form-login__rememberme span {
+    @apply translate-y-0.5;
+}
+.woocommerce-LostPassword.lost_password {
+    @apply underline underline-offset-4;
+}
+
+/* Subscription */
+.woocommerce-account .shop_table.subscription_details {
+    @apply mb-8;
+}

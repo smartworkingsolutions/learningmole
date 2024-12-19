@@ -1,0 +1,177 @@
+.woocommerce-cart .woocommerce {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-10 relative z-20;
+}
+.woocommerce-cart .woocommerce-notices-wrapper {
+    @apply col-span-full;
+}
+.woocommerce-cart .woocommerce-cart-form {
+    @apply lg:col-span-2;
+}
+
+.woocommerce-cart-form table {
+    @apply w-full border-b border-neutral-300;
+}
+.woocommerce-cart-form .product-thumbnail img {
+    @apply w-24 h-28 object-cover;
+}
+.woocommerce-cart-form thead {
+    @apply bg-neutral-100 h-14;
+}
+.woocommerce-cart-form tr,
+.woocommerce-cart-form th,
+.woocommerce-cart-form td {
+    @apply text-left;
+}
+.woocommerce-cart-form tbody tr > td {
+    @apply pt-5;
+}
+.woocommerce-cart-form tbody td {
+    @apply pb-5 border-b border-neutral-300;
+}
+.woocommerce-cart-form tbody .product-price,
+.woocommerce-cart-form tbody .product-subtotal {
+    @apply text-green-500;
+}
+.woocommerce-cart-form .coupon {
+    @apply flex w-[45%] float-left;
+}
+.woocommerce-cart-form #coupon_code {
+    @apply min-w-[130px] mr-4;
+}
+.woocommerce-cart-form .coupon label {
+    @apply hidden;
+}
+.woocommerce-cart-form .coupon + button {
+    @apply float-right cursor-pointer;
+}
+.woocommerce-cart-form .quantity .qty {
+    @apply max-w-[100px];
+}
+
+.cart-empty.woocommerce-info {
+    @apply p-6 mt-4;
+}
+
+/* Cart total */
+.woocommerce-cart .cart-collaterals h2 {
+    @apply bg-neutral-100 p-4 font-bold leading-snug text-center;
+}
+.woocommerce-cart .cart-collaterals table {
+    @apply w-full text-left;
+}
+.woocommerce-cart .cart-collaterals tbody td {
+    @apply p-5;
+}
+.woocommerce-cart .cart-collaterals tbody th {
+    @apply border-r border-neutral-300;
+}
+.woocommerce-cart .cart-collaterals tbody tr {
+    @apply border-b border-neutral-300;
+}
+.wc-proceed-to-checkout .button {
+    @apply w-full mt-10;
+}
+.woocommerce-cart .woocommerce-Price-amount.amount {
+    @apply text-text-color font-bold;
+}
+
+
+/* Tables */
+table.shop_table_responsive thead {
+    display: none;
+}
+
+table.shop_table_responsive tbody th {
+    display: none;
+}
+
+table.shop_table_responsive tr {
+    position: relative;
+}
+table.shop_table_responsive tr td {
+    display: block;
+    text-align: right;
+    clear: both;
+}
+table.shop_table_responsive tr td::before {
+    content: attr(data-title) "";
+    float: left;
+}
+
+table.shop_table_responsive tr td.product-remove a {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: $color__text-main; */
+    border-radius: 50%;
+    line-height: 0.7;
+}
+table.shop_table_responsive tr td.product-remove a:hover {
+    background: red;
+    color: #fff;
+}
+
+table.shop_table_responsive tr td.product-remove::before {
+    display: none;
+}
+
+table.shop_table_responsive tr td.actions::before,
+table.shop_table_responsive tr td.download-actions::before {
+    display: none;
+}
+
+table.shop_table_responsive tr td.download-actions .button {
+    display: block;
+    text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+
+    table.shop_table_responsive thead {
+        display: table-header-group;
+    }
+
+    table.shop_table_responsive tbody th {
+        display: table-cell;
+    }
+
+    table.shop_table_responsive tr th,
+    table.shop_table_responsive tr td {
+        text-align: left;
+    }
+
+    table.shop_table_responsive tr td {
+        display: table-cell;
+    }
+    table.shop_table_responsive tr td::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    table.shop_table_responsive tr td.product-remove a {
+        background: red;
+        color: #fff;
+
+        position: absolute;
+        top: 50px;
+        left: -10px;
+    }
+    .woocommerce-cart-form tbody td.product-remove {
+        border: none;
+    }
+    .woocommerce-cart-form .coupon {
+        width: 100%;
+    }
+    .woocommerce-cart-form .coupon + button {
+        float: left;
+        margin: 24px 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    .woocommerce-cart-form .button {
+        min-width: fit-content;
+    }
+}

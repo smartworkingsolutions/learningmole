@@ -1,0 +1,17 @@
+.sidebar {
+    @apply col-span-3 hidden lg:grid gap-6 items-start w-full order-first my-14;
+}
+
+.widget_block {
+    @apply bg-light-color p-6;
+}
+.wp-block-heading {
+    @apply text-lg font-bold mb-4;
+}
+.wc-block-product-categories-list-item {
+    @apply mb-1;
+}
+.editor-styles-wrapper .wc-block-components-checkbox,
+.wc-block-components-checkbox {
+    @apply mt-2;
+}

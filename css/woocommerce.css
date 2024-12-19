@@ -1,0 +1,32 @@
+@import "wc/products.css";
+@import "wc/sidebar.css";
+@import "wc/single-product.css";
+@import "wc/category.css";
+@import "wc/components.css";
+@import "wc/cart.css";
+@import "wc/checkout.css";
+@import "wc/order.css";
+@import "wc/my-account.css";
+
+.woocommerce-page .wysiwyg-editor ul {
+    @apply list-none p-0;
+}
+.woocommerce-page.woocommerce-order-received .wysiwyg-editor ul {
+    @apply list-none p-6;
+}
+.woocommerce-page .wysiwyg-editor li {
+    @apply p-0;
+}
+
+.woocommerce-notices-wrapper ul li {
+	@apply flex items-center gap-4;
+}
+
+.woocommerce-order-details .woocommerce-order-details__title,
+.woocommerce-order-details header h2 {
+    @apply mb-4;
+}
+
+.woocommerce-orders-table {
+    @apply w-full;
+}

@@ -1,0 +1,187 @@
+.single-product .woocommerce-page > .product {
+    @apply grid md:grid-cols-2 gap-8 relative;
+}
+.product .onsale {
+    @apply bg-primary-color text-sm uppercase tracking-widest px-2 py-px absolute left-2 top-2 z-10;
+}
+.woocommerce-product-gallery {
+    @apply relative;
+}
+.woocommerce-product-gallery .flex-viewport {
+    @apply border border-neutral-300;
+}
+.woocommerce-product-gallery__wrapper img {
+    @apply w-full h-full xl:w-[890px] xl:h-[700px] object-cover;
+}
+.woocommerce-product-gallery__trigger {
+    @apply absolute top-3 right-3;
+}
+.entry-summary {
+    @apply relative;
+}
+.product_title {
+    @apply text-3xl;
+}
+.entry-summary .price {
+    @apply text-2xl font-bold;
+}
+.entry-summary .price,
+.woocommerce-product-details__short-description {
+    @apply mt-8;
+}
+.entry-summary .price ins {
+    @apply no-underline;
+}
+.product_meta {
+    @apply flex flex-col mt-8;
+}
+form.cart {
+    @apply grid lg:grid-cols-2 gap-8 mt-8;
+}
+form.cart .qty,
+form.cart .button {
+    @apply w-full h-12;
+}
+form.cart .quantity {
+    @apply w-full;
+}
+/* form.cart .button {
+    @apply text-dark-color bg-transparent font-semibold hover:bg-dark-color hover:text-white border-2 border-border-color;
+} */
+
+form.variations_form.cart {
+    @apply lg:grid-cols-1;
+}
+.woocommerce-variation-add-to-cart.variations_button {
+    @apply grid lg:grid-cols-2 gap-8;
+}
+form.variations_form.cart table {
+    @apply w-full text-left;
+}
+form.variations_form.cart .woo-variation-items-wrapper {
+    @apply mb-4;
+}
+form.variations_form.cart .single_variation_wrap {
+    @apply mt-2;
+}
+form.variations_form.cart .single_variation_wrap .single_variation {
+    @apply mb-8;
+}
+
+.product .woocommerce-tabs,
+.related.products {
+    @apply col-span-full mt-10;
+}
+
+/* Tabs */
+.product .woocommerce-tabs {
+    @apply grid grid-cols-1 md:grid-cols-4 gap-10;
+}
+.product .woocommerce-tabs li:first-of-type {
+    @apply border-t;
+}
+.product .woocommerce-tabs li {
+    @apply border-b border-border-color py-4;
+}
+.product .woocommerce-tabs li.active {
+    @apply font-bold;
+}
+.product .woocommerce-Tabs-panel {
+    @apply col-span-3;
+}
+.product .woocommerce-Tabs-panel h2,
+.woocommerce-Reviews .comment-reply-title,
+.related.products > h2 {
+    @apply text-2xl font-bold mb-6;
+}
+.woocommerce-Reviews .comment-reply-title {
+    @apply grid;
+}
+.product .woocommerce-Tabs-panel table {
+    @apply text-left;
+}
+.product .woocommerce-Tabs-panel .woocommerce-product-attributes-item__label {
+    @apply pr-4 py-1;
+}
+
+.woocommerce-Reviews .commentlist {
+    @apply mb-6;
+}
+.woocommerce-Reviews .comment_container {
+    @apply flex space-x-6;
+}
+.woocommerce-Reviews .comment_container img {
+    @apply w-20 h-20 object-cover shrink-0;
+}
+.woocommerce-Reviews .comment-form {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-6;
+}
+.woocommerce-Reviews .woocommerce-noreviews {
+    @apply text-base border border-l-4 py-2 px-4 mb-4;
+}
+.woocommerce-Reviews .comment-form > p,
+.comment-form-rating {
+    @apply col-span-2 flex flex-col;
+}
+.woocommerce-Reviews .comment-form > p.comment-form-comment {
+    @apply order-2;
+}
+.woocommerce-Reviews .comment-form > p.comment-form-author,
+.woocommerce-Reviews .comment-form > p.comment-form-email {
+    @apply col-auto order-1;
+}
+.woocommerce-Reviews .comment-form > p.comment-form-cookies-consent {
+    @apply flex-row space-x-2 items-center order-2;
+}
+.woocommerce-Reviews .comment-form > p.form-submit {
+    @apply flex-row order-2;
+}
+.woocommerce-Reviews .comment-respond textarea {
+    @apply w-full;
+}
+
+/* Rating Stars */
+.woocommerce-product-rating {
+    @apply flex items-center text-sm;
+}
+
+/* Product Slide arrows */
+ul.flex-direction-nav {
+    @apply w-full p-0 absolute top-1/2 -translate-y-1/2 z-20 list-none;
+}
+li.flex-nav-prev,
+li.flex-nav-next {
+    @apply absolute;
+}
+li.flex-nav-prev {
+    @apply left-2;
+}
+li.flex-nav-next {
+    @apply right-2;
+}
+
+a.flex-next,
+a.flex-prev {
+    @apply invisible;
+}
+/* a.flex-next::after,
+a.flex-prev::before {
+    @apply visible content-['\f105'] font-awesome text-3xl bg-primary-color p-3;
+}
+a.flex-prev::before {
+    @apply content-['\f104'];
+} */
+ul.flex-direction-nav li a {
+	/* @apply text-white; */
+}
+
+/* Product Slide Thumbnails */
+.flex-control-nav.flex-control-thumbs {
+    @apply flex;
+}
+.flex-control-nav.flex-control-thumbs li {
+    @apply flex-1;
+}
+.flex-control-nav.flex-control-thumbs img {
+    @apply w-[130px] border border-neutral-300;
+}
